@@ -1,0 +1,155 @@
+/*Pallete*/
+@media screen and (max-width: 768px) {
+    :root {
+        --scroll-bar: 3vw;
+    }
+    
+    .menu {
+        align-items: center;
+        padding: 5px;
+        gap: 1vw;
+    }
+    
+    footer {
+        position: sticky;
+    }
+}
+
+@media screen and (max-width: 535px) {
+    .menu a {
+        border-radius: 3rem;
+        height: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+:root {
+    --Main: #121619ff;
+    --Main-Light: #1a1f24ff;
+    --Secondary: #212e1eff;
+    --Tertiary: #2a3b1aff;
+    --Light: #d2bf55ff;
+    --Light-Dark: #b2a04aff;
+    --Accent: #772f1aff;
+    --scroll-bar: 15px;
+}
+
+/*Scroll Bar*/
+::-webkit-scrollbar {
+    width: var(--scroll-bar);
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-corner {
+    background: var(--Main);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--Secondary);
+    transition: .75s ease;
+    border-radius: 1rem;
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--Tertiary);;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--Main-Light);
+    color: var(--Light);
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient( 
+        to bottom, 
+        var(--Main-Light) 60%, 
+        transparent);
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    height: 5%;
+    width: (100% - 15px);
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    gap: 2vw;
+    text-align: center;
+    background-color: var(--Secondary);
+    border-radius: 3rem;
+    padding: 10px;
+}
+
+.link {
+    color: var(--Light);
+    text-decoration: none;
+    color: var(--Light);
+    padding: 10px 20px;
+    border-radius: 1rem;
+    transition: background-color .5s ease;
+}
+
+.link:hover {
+    background-color: var(--Tertiary);
+    transition: .75s ease;
+}
+
+.sing {
+    text-decoration: none;
+    color: var(--Light);
+    padding: 9px 19px;
+    border: var(--Accent) 1px solid;
+    border-radius: 1rem;
+    background-color: var(--Accent);
+    transition: 1s ease-in-out;
+}
+
+.sing:hover {
+    transition: border .75s ease-in-out;
+    padding: 9px 19px;
+    border: var(--Light) 1px dotted;
+}
+
+.content {
+    padding: 3rem;
+    display: grid;
+    grid: collumn;
+    gap: 3rem;
+    align-items: space-between;
+    margin: 3rem, 2rem, 0, 2rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--Light);
+}
+
+footer {
+    background-color: var(--Secondary);
+    color: var(--Light);
+    text-align: center;
+    padding: 20px;
+    width: (100% - 15px);
+    bottom: 0;
+}
+
+footer a {
+    color: var(--Light-Dark);
+    text-decoration: none;
+}
+
